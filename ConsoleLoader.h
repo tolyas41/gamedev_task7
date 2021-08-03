@@ -4,8 +4,11 @@
 class ConsoleLoader: public Loader {
 
 public:
+	virtual void Load() override;
 
-	static void InputData(Matrix& obj);
+	 ConsoleLoader(int data, int rows, int columns) 
+		 : Loader(data, rows, columns) {
+	 }
 
 };
 

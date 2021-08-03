@@ -5,6 +5,10 @@ class Loader: public Matrix {
 
 public:
 
-	virtual void InputData(Matrix& obj) = 0;
+	virtual void Load() = 0;
+
+	Loader(int data, int rows, int columns) 
+		: Matrix(data, rows, columns) {
+	}
 };
 

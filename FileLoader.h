@@ -4,7 +4,12 @@
 class FileLoader: public Loader {
 
 public:
-	static void InputData(Matrix& obj);
+	virtual void Load() override;
+
+	FileLoader (int data, int rows, int columns) 
+		: Loader(data, rows, columns) { 
+	}
+
 
 };
 

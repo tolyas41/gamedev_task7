@@ -5,7 +5,13 @@ class UsualSort: public Sorter {
 
 public:
 
-	static void Sort(std::vector<Matrix>& vec);
+	std::vector<Matrix> Matrices;
+
+	virtual void Sort() override;
+
+	UsualSort(int data, int rows, int columns)
+		: Sorter(data, rows, columns) {
+	}
 
 };
 

@@ -6,7 +6,11 @@ class Sorter: public Matrix{
 
 public:
 
-	virtual void Sort(std::vector<Matrix> vec) = 0;
+	virtual void Sort() = 0;
+
+	Sorter(int data, int rows, int columns) 
+		: Matrix(data, rows, columns) {
+	}
 
 };
 

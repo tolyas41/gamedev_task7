@@ -1,8 +1,16 @@
 #include "UsualSort.h"
 #include <vector>
-#include <algorithm>
 
-void UsualSort::Sort(std::vector<Matrix>& vec) {
 
-	//std::sort(vec.begin(), vec.end(), [](Matrix a, Matrix b) {return (a.DiagonalsProduct() < b.DiagonalsProduct()); });
+void UsualSort::Sort() {
+	bool IsSorted = false;
+	while (!IsSorted) {
+		IsSorted = true;
+		for (int i = 0; i < Matrices.size() - 1; i++) {
+			if (Matrices.at(i).DiagonalsProduct() > Matrices.at(i + 1).DiagonalsProduct()) {
+				std::iter_swap(Matrices.begin() + i , Matrices.begin() + i + 1);
+				IsSorted = false;
+			}
+		}
+	}
 }

@@ -5,7 +5,13 @@ class QuickSort: public Sorter {
 
 public:
 
-	static void Sort(std::vector<Matrix> &vec);
+	std::vector<Matrix> Matrices;
+
+	virtual void Sort() override;
+
+	QuickSort(int data, int rows, int columns)
+		: Sorter(data, rows, columns) {
+	}
 
 };
 
